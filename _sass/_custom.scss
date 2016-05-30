@@ -10,3 +10,14 @@
   -moz-border-radius: 0;
   border-radius: 0;
 }
+.thumbnail-img {
+  display: block;
+  max-height: 300px;
+  margin: 0 auto;
+}
+
+.thumbnail-small {
+  max-height: 85px;
+  float: left;
+  margin: 0 20px 10px 0;
+}
