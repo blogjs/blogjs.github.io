@@ -15,6 +15,6 @@ description: "Welcome post of javascript blog: 'blogJS'"
 
 Welcome to blog about **javascript**.
 Let read some interesting things about it.
-If you have any proposals or questions, you may contact me through [Contact page]({{site.baseurl}}contact)
+<!--more-->If you have any proposals or questions, you may contact me through [Contact page]({{site.baseurl}}contact)
 
 Enjoy :)
