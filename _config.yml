@@ -1,5 +1,10 @@
 # Dependencies
-gems:             [jekyll-paginate, jekyll-seo-tag]
+gems:
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
+#  - thumbnail
+  - mini_magick
 markdown:         kramdown
 highlighter:      rouge
 

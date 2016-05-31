@@ -81,5 +81,9 @@ ___
 
 No doubt, **Ecmascript 6 is sexy!**
 If you haven't tried coding in **Ecmascript 6** just open **Chrome dev tools** and try it out. You will definitely love it!
-Start with simple arrow functions: `a = x => x*2; a(10)`
+Start with simple arrow functions:
+    
+    a = x => x*2;
+    a(10);
+    
 Good luck ;)
