@@ -4,7 +4,7 @@ comments: true
 title:  "Constants in Javascript - Ecmascript 6"
 date:   2016-06-06 18:00:00 +0200
 categories: javascript ecmascript6 
-published: false
+published: true
 tags: 
     - constants
     - const
@@ -28,65 +28,86 @@ ___
 
 Very simple. Just use `const` instead of `var` :
 
-    const brandColor = 'turquoise';
-    
+    const brandColor = 'turquoise';  
 
 ___
 
-## ES6 code example
+## `Const` and scopes
+
+**Redeclaring:**
+
+Constants follow the same scope rules as variables but they can’t be redeclared. 
+
+    const num = 1;
+    //1
+    const num = 2;
+    //Uncaught TypeError: Identifier 'num' has already been declared(…)
 
 
-**Arrow functions:**
+**Function scope:**
 
-    odds  = evens.map(v => v + 1)
-    pairs = evens.map(v => ({ even: v, odd: v + 1 }))
-    nums  = evens.map((v, i) => v + i)
+You can declare `const` inside the function scope with the same as outside it, but you actually have local scoped `const`.
 
-
-
-**Classes:**
-
-    class Rectangle extends Shape {
-        constructor (id, x, y, width, height) {
-            super(id, x, y)
-            this.width  = width
-            this.height = height
-         }
+    const num = 1;
+    
+    function setNum(){
+        const num = 2;
+        console.log(num);
     }
-    class Circle extends Shape {
-        constructor (id, x, y, radius) {
-            super(id, x, y)
-            this.radius = radius
-        }
+    
+    setNum();
+    //2;
+    
+    console.log(num);
+    //1;
+    
+You cannot reach `const` outside scope:
+
+    if(!num){
+        const num = 2;
     }
+    console.log(num);
+    //Uncaught ReferenceError: num is not defined(…)
 
 ___
 
-## ES6 vs ES5
+## Deleting and changing value of `const`
 
-Here is very useful website by _Ralf S. Engelschall_, which simply shows new features of ES6 by comparing code with ES5:
-[es6-features.org](http://es6-features.org)
+You cannot change value or delete constant.
 
-___
-
-## Browser support
-
-**Google Chrome** and **Mozilla Firefox** support almost whole functionality of ES6, **Microsoft Edge** also is not doing bad. 
-Other browsers have not full support. And as you might guess, **Internet Explorer** does not support Javascript in Ecmascript6.
-Here is full browser support table: [kangax.github.io/compat-table/es6/](https://kangax.github.io/compat-table/es6/)
-
-But don't upset! **You can write production ready applications using ES6**. You just need to compile it throught **[Babel](https://babeljs.io/)**
-which transforms your code to Javascript in ES5.
-
-___
-
-## Conclusion
-
-No doubt, **Ecmascript 6 is sexy!**
-If you haven't tried coding in **Ecmascript 6** just open **Chrome dev tools** and try it out. You will definitely love it!
-Start with simple arrow functions:
+    const a = 1;
     
-    a = x => x*2;
-    a(10);
+    a++;
+    //Uncaught TypeError: Assignment to constant variable.(…)
     
-Good luck ;)
+    delete a;
+    //true
+    
+    console.log(a);
+    //1
+
+___
+
+## `Const` Objects
+
+If you declare `const` Object, you will not be able to delete it, or make it `array` or `string`, but you will be able to declare, change and even delete values of your `const` Object.
+
+    const params = {
+        size: 2,
+        color: 'gray'
+    }
+    
+    params = {};
+    //Uncaught TypeError: Assignment to constant variable.(…)
+    
+    params.size++;
+    delete params.color;
+    
+    console.log(params)
+    //Object {size: 3}
+
+___
+
+ES 2015 provided `const` and `let` to let us write `var`-free javascript. So try to figure it out :) 
+
+
