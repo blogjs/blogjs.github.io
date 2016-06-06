@@ -13,7 +13,7 @@ tags:
     - es
     - javascript
     - js
-description: "Understanding how does contant variables work in Javascript ecmascript 6. Immutable variables in Javascript"
+description: "Understanding how does constant variables work in Javascript Ecmascript 6. Immutable variables in Javascript"
 thumbnail: "/public/const.png"
 
 ---
