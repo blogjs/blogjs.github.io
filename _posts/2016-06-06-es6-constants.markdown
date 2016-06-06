@@ -12,23 +12,24 @@ tags:
     - es6
     - es
     - javascript
-description: ""
+    - js
+description: "Understanding how does contant variables work in Javascript ecmascript 6. Immutable variables in Javascript"
 thumbnail: "/public/const.png"
 
 ---
 
+## Const
 
-HI. If you are here. It seems you've heard about **Ecmascript 6**, and want to know more.
-
-If we'll check [Wikipedia](https://en.wikipedia.org/wiki/ECMAScript), it says that **Ecmascript** is a _'trademarked scripting-language specification'_.
-It means that **ES** - it's a specification or in another words standards of scripting languages, such as **JavaScript**, **ActionScript**, **Jscript**. 
-**Ecmascript** it is actually core of that languages, standards they are based at.<!--more-->
+In Javascript ES5 there is no immutable variables. Everywhere you are defining `var`, even if you need constant data. And actually you cannot be sure if this variable exists or has the proper value after x lines of code executed. \n So in Javascript ES6 there is `const`, like the C++ one, which allows you to have immutable variable, so let's look how does it work:  <!--more-->
 
 ___
 
-## Ecmascript 6
+## Declaration
 
-Known as **ES6** or **Ecmascript 2015** was finalized in June 2015. There were added renewed syntax to create complexed javascript applications with classes, modules etc.
+Very simple. Just use `const` instead of `var` :
+
+    const brandColor = 'turquoise';
+    
 
 ___
 
