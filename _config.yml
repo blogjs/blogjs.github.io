@@ -15,9 +15,9 @@ permalink:        pretty
 excerpt_separator: <!--more-->
 
 # Setup
-title:            blogJS
+title:            blogJS - Javascript blog
 tagline:          'javascript'
-description:      'Javascript blog'
+description:      'Javascript blog with tips, reviews, and functionality-understanding articles. Blog contents review of Javascript Ecmascript6 and its brand new methods'
 url:              http://blogjs.github.io
 baseurl:          /
 twitter_username: antontemchenko
