@@ -1,18 +1,15 @@
 ---
 layout: post
 comments: true
+categories:
+    - Ecmascript 6
+    - Javascript
 title:  "Constants in Javascript - Ecmascript 6"
 date:   2016-06-06 18:00:00 +0200
-categories: javascript ecmascript6 
 published: true
 tags: 
-    - constants
-    - const
-    - ecmascript 6
-    - es6
-    - es
-    - javascript
-    - js
+    - Const
+    - Ecmascript 6
 description: "Understanding how does constant variables work in Javascript Ecmascript 6. Immutable variables in Javascript"
 thumbnail: "/public/const.png"
 

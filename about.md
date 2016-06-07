@@ -2,9 +2,10 @@
 layout: page
 title: About author
 permalink: /about/
+order: 4
 ---
 
-My name is Anton Temchenko and I am Frontend developer. 
+My name is Anton Temchenko and I am Front End developer. 
 I am ukrainian leaving in Warsaw, Poland
 
 You may visit my website:

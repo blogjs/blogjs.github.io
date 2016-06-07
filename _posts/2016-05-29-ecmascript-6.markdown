@@ -1,15 +1,15 @@
 ---
 layout: post
 comments: true
+categories:
+    - Ecmascript 6
+    - Javascript
 title:  "Ecmascript 6 review, explanation, comparsion with ecmascript 5"
 date:   2016-05-29 20:00:00 +0200
-categories: javascript ecmascript6
 published: true
 tags: 
-    - ecmascript 6
-    - es6
-    - es
-    - javascript
+    - Ecmascript 6
+    - Ecmascript 2016
 description: "Reviewing Ecmascript 6. Information about ecmascript 6. Differences between ecmascript 5 and ecmascript 6. ES6 code examples. Showing browser support for Ecmascript 2015."
 thumbnail: "/public/es6.png"
 

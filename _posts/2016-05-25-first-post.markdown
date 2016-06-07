@@ -1,14 +1,14 @@
 ---
 layout: post
 comments: true
+categories:
+    - Talks
 title:  "Welcome to Javascript Blog"
 date:   2016-05-25 00:25:46 +0200
-categories: jekyll update
 published: true
 tags: 
-    - javascript
-    - js
-    - blog
+    - Javascript
+    - Blog
 description: "Welcome post of javascript blog: 'blogJS'"
 ---
 ### Hello everyone! 
