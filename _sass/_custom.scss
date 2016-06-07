@@ -1,10 +1,3 @@
-.sidebar {
-  width: 15rem;
-  overflow-x: auto;
-}
-.content {
-  max-width: 50rem;
-}
 #logo {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -20,4 +13,14 @@
   max-height: 85px;
   float: left;
   margin: 0 20px 10px 0;
+}
+
+@media (min-width: 48em) {
+  .sidebar {
+    width: 15rem;
+    overflow-x: auto;
+  }
+  .content {
+    max-width: 50rem;
+  }
 }
