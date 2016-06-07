@@ -20,7 +20,8 @@ thumbnail: "/public/const.png"
 
 ## Const
 
-In Javascript ES5 there is no immutable variables. Everywhere you are defining `var`, even if you need constant data. And actually you cannot be sure if this variable exists or has the proper value after x lines of code executed. \n So in Javascript ES6 there is `const`, like the C++ one, which allows you to have immutable variable, so let's look how does it work:  <!--more-->
+In Javascript ES5 there is no immutable variables. Everywhere you are defining `var`, even if you need constant data. And actually you cannot be sure if this variable exists or has the proper value after x lines of code executed. 
+So in Javascript ES6 there is `const`, like the C++ one, which allows you to have immutable variable, so let's look how does it work:  <!--more-->
 
 ___
 
