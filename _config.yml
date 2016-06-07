@@ -16,8 +16,8 @@ excerpt_separator: <!--more-->
 
 # Setup
 title:            blogJS - Javascript blog
-tagline:          'javascript'
-description:      'Javascript blog with tips, reviews, and functionality-understanding articles. Blog contents review of Javascript Ecmascript6 and its brand new methods'
+tagline:          'JavaScript, Ecmascript6, js, es, node.js, angularJS, reactJS'
+description:      'Javascript blog with tips, reviews, and functionality-understanding articles.'
 url:              http://blogjs.github.io
 baseurl:          /
 twitter_username: antontemchenko
