@@ -3,6 +3,8 @@ layout: page
 title: About author
 permalink: /about/
 order: 4
+keywords: "Anton Temchenko, blog, author, javascript, blogger"
+description: "About author of 'BlogJS - Javascript blog' Anton Temchenko"
 ---
 
 My name is Anton Temchenko and I am Front End developer. 

@@ -4,7 +4,10 @@ title: Archive
 permalink: /archive/
 published: true
 order: 2
+keywords: "javascript posts, posts, archive, articles"
+description: "All posts of 'blogJS - Javascript blog' sorted by date"
 ---
+
 ___
 
 {% for post in site.posts %}

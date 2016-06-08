@@ -2,31 +2,32 @@
 layout: post
 comments: true
 categories:
-    - Ecmascript 6
+    - ECMAScript6
     - Javascript
-title:  "Ecmascript 6 review, explanation, comparsion with ecmascript 5"
+title:  "ECMAScript 6 review, explanation, comparsion with ECMAScript 5"
 date:   2016-05-29 20:00:00 +0200
 published: true
 tags: 
-    - Ecmascript 6
-    - Ecmascript 2016
-description: "Reviewing Ecmascript 6. Information about ecmascript 6. Differences between ecmascript 5 and ecmascript 6. ES6 code examples. Showing browser support for Ecmascript 2015."
+    - ECMAScript6
+    - ECMAScript 2016
+description: "Reviewing ECMAScript 6. Information about ECMAScript 6. Differences between ECMAScript 5 and ECMAScript 6. ES6 code examples. Showing browser support for ECMAScript 2015."
+keywords: "ECMAScript 6, ECMAScript 2015, ECMAScript 2016, javascript, es6 vs es5"
 thumbnail: "/public/es6.png"
 
 ---
 
 
-HI. If you are here. It seems you've heard about **Ecmascript 6**, and want to know more.
+HI. If you are here. It seems you've heard about **ECMAScript 6**, and want to know more.
 
-If we'll check [Wikipedia](https://en.wikipedia.org/wiki/ECMAScript), it says that **Ecmascript** is a _'trademarked scripting-language specification'_.
+If we'll check [Wikipedia](https://en.wikipedia.org/wiki/ECMAScript), it says that **ECMAScript** is a _'trademarked scripting-language specification'_.
 It means that **ES** - it's a specification or in another words standards of scripting languages, such as **JavaScript**, **ActionScript**, **Jscript**. 
-**Ecmascript** it is actually core of that languages, standards they are based at.<!--more-->
+**ECMAScript** it is actually core of that languages, standards they are based at.<!--more-->
 
 ___
 
-## Ecmascript 6
+## ECMAScript 6
 
-Known as **ES6** or **Ecmascript 2015** was finalized in June 2015. There were added renewed syntax to create complexed javascript applications with classes, modules etc.
+Known as **ES6** or **ECMAScript 2015** was finalized in June 2015. There were added renewed syntax to create complexed javascript applications with classes, modules etc.
 
 ___
 
@@ -69,7 +70,7 @@ ___
 ## Browser support
 
 **Google Chrome** and **Mozilla Firefox** support almost whole functionality of ES6, **Microsoft Edge** also is not doing bad. 
-Other browsers have not full support. And as you might guess, **Internet Explorer** does not support Javascript in Ecmascript6.
+Other browsers have not full support. And as you might guess, **Internet Explorer** does not support Javascript in ECMAScript6.
 Here is full browser support table: [kangax.github.io/compat-table/es6/](https://kangax.github.io/compat-table/es6/)
 
 But don't upset! **You can write production ready applications using ES6**. You just need to compile it throught **[Babel](https://babeljs.io/)**
@@ -79,8 +80,8 @@ ___
 
 ## Conclusion
 
-No doubt, **Ecmascript 6 is sexy!**
-If you haven't tried coding in **Ecmascript 6** just open **Chrome dev tools** and try it out. You will definitely love it!
+No doubt, **ECMAScript 6 is sexy!**
+If you haven't tried coding in **ECMAScript 6** just open **Chrome dev tools** and try it out. You will definitely love it!
 Start with simple arrow functions:
     
     a = x => x*2;

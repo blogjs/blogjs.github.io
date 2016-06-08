@@ -10,8 +10,10 @@ tags:
     - Javascript
     - Blog
 description: "Welcome post of javascript blog: 'blogJS'"
+keywords: "Hello world of 'blogJS - javascript blog'"
 ---
-### Hello everyone! 
+
+### Hello ~~World~~ everyone! 
 
 Welcome to blog about **javascript**.
 Let read some interesting things about it.

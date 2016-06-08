@@ -15,6 +15,10 @@
   margin: 0 20px 10px 0;
 }
 
+.related-posts a {
+  display: inline-block;
+}
+
 @media (min-width: 48em) {
   .sidebar {
     width: 15rem;

@@ -2,23 +2,25 @@
 layout: post
 comments: true
 categories:
-    - Ecmascript 6
+    - ECMAScript6
     - Javascript
-title:  "Constants in Javascript - Ecmascript 6"
+title:  "Constants in Javascript - ECMAScript 6"
 date:   2016-06-06 18:00:00 +0200
 published: true
 tags: 
     - Const
-    - Ecmascript 6
-description: "Understanding how does constant variables work in Javascript Ecmascript 6. Immutable variables in Javascript"
+    - ECMAScript6
+description: "Understanding how does constant variables work in Javascript ECMAScript 6. Immutable variables in Javascript"
 thumbnail: "/public/const.png"
+keywords: "const, ECMAScript 6, ECMAScript 2015, es6, javascript, immutable variables, constant"
 
 ---
 
 ## Const
 
 In Javascript ES5 there is no immutable variables. Everywhere you are defining `var`, even if you need constant data. And actually you cannot be sure if this variable exists or has the proper value after x lines of code executed. 
-So in Javascript ES6 there is `const`, like the C++ one, which allows you to have immutable variable, so let's look how does it work:  <!--more-->
+So in Javascript ES6 `const` variable came. 
+When you declare something with `const`, it means that the identifier can't be reassigned. So let's look how does it work:  <!--more-->
 
 ___
 
@@ -27,6 +29,8 @@ ___
 Very simple. Just use `const` instead of `var` :
 
     const brandColor = 'turquoise';  
+
+The value of a constant doesn’t have to to be known at compile time, but you must assign it a value exactly once.
 
 ___
 
@@ -67,6 +71,14 @@ You cannot reach `const` outside scope:
     console.log(num);
     //Uncaught ReferenceError: num is not defined(…)
 
+Ok that's easy. But also you cannot reach const by `this`, because it is block-scoped:
+ 
+    
+    const date = new Date();
+    
+    console.log(this.date);
+    //undefined
+    
 ___
 
 ## Deleting and changing value of `const`
@@ -103,6 +115,25 @@ If you declare `const` Object, you will not be able to delete it, or make it `ar
     
     console.log(params)
     //Object {size: 3}
+
+
+But there is the way to `freeze` the Object with its values:
+
+    const obj = Object.freeze({
+        'num': 3
+    });
+    obj.num = 4; //throws error
+    
+___
+
+## So where to use `const` ?
+
+Use `const` when you don't need reassign the identifier. In practice it is becoming the brand new `var`
+
+___
+
+## And what about `let` ?
+Read more in the [**LET in ECMAScript 6**]({% post_url 2016-06-09-es6-let-block-scoped-variables %})
 
 ___
 

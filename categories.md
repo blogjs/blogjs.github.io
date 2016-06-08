@@ -4,6 +4,8 @@ title: Categories
 permalink: /categories/
 published: false
 order: 3
+keywords: "categories, javascript, blog, articles, tags"
+description: "All posts of 'blogJS - Javascript blog', sorted by categories"
 ---
 
 {% assign rawcats = "" %}
