@@ -6,7 +6,7 @@ categories:
     - Javascript
 title:  "Blocked-Scoped Functions in ECMAScript 6"
 date:   2016-06-11 0:00:00 +0200
-published: true
+published: false
 tags: 
     - Scope
     - ECMAScript6
