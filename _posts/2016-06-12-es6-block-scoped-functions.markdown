@@ -31,7 +31,7 @@ This is the way we'd write in **ESCMAScript 5**:
             console.log("You cannot reach me outside this scope");
             (function(){
                 console.log("You cannot reach me even from privateFunc");
-            }();
+            })();
         }
         privateFunc();
     })();
@@ -48,3 +48,5 @@ And here is **ECMAScript 6 block-scoped functions**:
         }
         privateFunc()
     }
+    
+As you see, we just need to use curly brackets **`{`** & **`}`**  to define block. And we have closed scope!
