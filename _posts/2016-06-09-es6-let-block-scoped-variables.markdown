@@ -88,13 +88,39 @@ ___
      
  ___
  
+## `for` loop
+ 
+ It is really **not clever**, that in **JavaScript ES5** when you create a **variable** in a `for` loop, 
+ you can **reach that variable out of that loop**. <br/>
+ For example, if you had a **variable** with the **same name** it will be **rewritten** by a variable from inside a `for` loop. 
+ 
+**ECMAScript 5 example**:
+ 
+     var i = 5;
+     //...
+     for(var i=0; i<10; i++){
+        //...
+     };
+     console.log(i);
+     // 10
+ 
+In ES6 this problem solves with `let` variable, because it is **block-scoped**, so our new `let` variable will be scoped to `for` block.
+ 
+ **ECMAScript 6 example**:
+  
+      let i = 5;
+      //...
+      for(let i=0; i<10; i++){
+         //...
+      };
+      console.log(i);
+      // 5
+ 
+ ___
+ 
 ## `let` and `const` best practices
  
- - `const` variable should become your default (immutable) variable. 
- - Use `let` if you need to provide changes to your variable. 
- - It is good to use `let` in `for` loops, because you always need block-scoped variable there:
- 
-        for(let i = 0; i<5; i++){
-            console.log(i)
-        }
-- Try to exclude `var` from your code. `var` is now the weakest signal available when you define a variable in JavaScript
+ - `const` variable should become your default variable. <i>(Read about [const]({% post_url 2016-06-06-es6-constants %}) to know why)</i>
+ - Use `let` for simple variables, which are had to be changed. 
+ - It is good to use `let` in `for` loops, because you always need block-scoped variable there
+ - Try to exclude `var` from your code. `var` is now the weakest signal available when you define a variable in JavaScript

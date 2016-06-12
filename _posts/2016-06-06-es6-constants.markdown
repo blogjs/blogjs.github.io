@@ -19,9 +19,18 @@ thumbnailAlt: "Const ES6"
 
 ## Const
 
-In Javascript ES5 there is no immutable variables. Everywhere you are defining `var`, even if you need constant data. And actually you cannot be sure if this variable exists or has the proper value after x lines of code executed. 
-So in Javascript ES6 `const` variable came. 
-When you declare something with `const`, it means that the identifier can't be reassigned. So let's look how does it work:  <!--more-->
+In **ECMAScript 6** we have **`const`** variable arrived. Does it work the same as C++ `const`? <br/>
+Not exactly. I would even say, <i>"not at all"</i>.<br/>
+When you declare something with `const` in **ECMAScript 6**, it means that the **identifier can't be reassigned.** <br/>
+
+**What does it mean?** <br/><!--more-->
+
+ - It means that you cannot declare that variable more than once. Because its **binding is immutable**. <br/>
+ - You have guaranty that **no rebinding will happen** to it. <br/>
+ - You will **not** be able to change its **type**.<br/>
+ - If your `const` variable is a simple value, like `string`, `number`, `boolean` etc. you also **wouldn't be able to change its value**.<br/>
+ 
+So let's look how does it work:  
 
 ___
 
@@ -39,7 +48,7 @@ ___
 
 **Redeclaring:**
 
-Constants follow the same scope rules as variables but they can’t be redeclared. 
+Constants can’t be redeclared. 
 
     const num = 1;
     //1
@@ -84,7 +93,7 @@ ___
 
 ## Deleting and changing value of `const`
 
-You cannot change value or delete constant.
+You cannot change value or delete a simple constant variable.
 
     const a = 1;
     
@@ -129,7 +138,8 @@ ___
 
 ## So where to use `const` ?
 
-Use `const` when you don't need reassign the identifier. In practice it is becoming the brand new `var`
+Use `const` when you don't need reassign the identifier. In practice it is becoming the brand new `var` for **objects** and **arrays**. <br/> 
+Because if you need to change type of any of them, it seems you wrote bad, not semantic code.
 
 ___
 
@@ -138,6 +148,6 @@ Read more in the [**LET in ECMAScript 6**]({% post_url 2016-06-09-es6-let-block-
 
 ___
 
-ES 2015 provided `const` and `let` to let us write `var`-free javascript. So try to figure it out :) 
+ES 2015 provided `const` and `let` to let us write `var`-free javascript. So are you going to use `var` again? :) 
 
 
