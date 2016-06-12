@@ -13,6 +13,7 @@ tags:
 description: "Understanding how does constant variables work in Javascript ECMAScript 6. Immutable variables in Javascript"
 thumbnail: "/public/const.png"
 keywords: "const, ECMAScript 6, ECMAScript 2015, es6, javascript, immutable variables, constant"
+thumbnailAlt: "Const ES6"
 
 ---
 

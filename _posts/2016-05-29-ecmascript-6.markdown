@@ -13,6 +13,7 @@ tags:
 description: "Reviewing ECMAScript 6. Information about ECMAScript 6. Differences between ECMAScript 5 and ECMAScript 6. ES6 code examples. Showing browser support for ECMAScript 2015."
 keywords: "ECMAScript 6, ECMAScript 2015, ECMAScript 2016, javascript, es6 vs es5"
 thumbnail: "/public/es6.png"
+thumbnailAlt: "ECMAScript 6"
 
 ---
 

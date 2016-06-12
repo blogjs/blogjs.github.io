@@ -14,6 +14,7 @@ tags:
 description: "Understanding let in Javascript ECMAScript 6. Difference and comparsion of let and var. Block scoped variables in es6."
 thumbnail: "/public/letitbe.jpg"
 keywords: "let, var, block scoped variable, ECMAScript 6, javascript"
+thumbnailAlt: "ECMAScript 6 let"
 
 ---
 

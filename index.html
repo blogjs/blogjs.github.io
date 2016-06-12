@@ -11,7 +11,7 @@ keywords: "Javascript, ECMAScript6, blog, js, es, frontend, front end, Anton Tem
       <h1 class="post-title">
         <a href="{{ post.url }}">
           {% if post.thumbnail %}
-            <img src="{{ post.thumbnail }}" class="thumbnail-img thumbnail-small" />
+            <img src="{{ post.thumbnail }}" class="thumbnail-img thumbnail-small"  alt="{{post.thumbnailAlt}}" />
           {% endif %}
           {{ post.title }}
         </a>

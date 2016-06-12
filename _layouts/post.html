@@ -20,7 +20,7 @@ layout: default
         <h3>
           <a href="{{ post.url }}">
           {% if post.thumbnail %}
-              <img src="{{ post.thumbnail }}" class="thumbnail-img thumbnail-small" />
+              <img src="{{ post.thumbnail }}" class="thumbnail-img thumbnail-small" alt="{{post.thumbnailAlt}}"/>
           {% endif %}
             {{ post.title }}
             <small>{{ post.date | date_to_string }}</small>
