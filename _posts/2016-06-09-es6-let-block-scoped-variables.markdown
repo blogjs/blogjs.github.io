@@ -3,7 +3,6 @@ layout: post
 comments: true
 categories:
     - ECMAScript6
-    - Javascript
 title:  "LET in ECMAScript 6 - Block Scoped Variables"
 date:   2016-06-09 1:00:00 +0200
 published: true

@@ -3,7 +3,6 @@ layout: post
 comments: true
 categories:
     - ECMAScript6
-    - Javascript
 title:  "Constants in Javascript - ECMAScript 6"
 date:   2016-06-06 18:00:00 +0200
 published: true

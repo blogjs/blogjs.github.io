@@ -3,7 +3,6 @@ layout: post
 comments: true
 categories:
     - ECMAScript6
-    - Javascript
 title:  "ECMAScript 6 review, explanation, comparsion with ECMAScript 5"
 date:   2016-05-29 20:00:00 +0200
 published: true

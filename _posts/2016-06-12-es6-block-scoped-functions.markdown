@@ -3,7 +3,6 @@ layout: post
 comments: true
 categories:
     - ECMAScript6
-    - Javascript
 title:  "Block-Scoped Functions in ECMAScript 6"
 date:   2016-06-12 19:00:00 +0200
 published: true
