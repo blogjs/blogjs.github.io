@@ -16,8 +16,8 @@ excerpt_separator: <!--more-->
 
 # Setup
 title:            blogJS
-tagline:          'Javascript blog by Anton Temchenko'
-description:      'Javascript blog with tips, reviews, and functionality-understanding articles.'
+tagline:          'JavaScript blog by Anton Temchenko'
+description:      'JavaScript blog with tips, reviews, and functionality-understanding articles.'
 url:              http://blogjs.github.io
 baseurl:          /
 twitter_username: antontemchenko
