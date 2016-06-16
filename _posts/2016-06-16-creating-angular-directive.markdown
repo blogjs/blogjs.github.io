@@ -228,10 +228,11 @@ ___
 
 Use **Git tags** to support versioning of your project. Read more about [Git Tagging](https://git-scm.com/book/en/v2/Git-Basics-Tagging)
         
+___
 
 ## GitHub repository
 
-![GitHub logo](/public/github.png "") 
-[Three-state checkbox - GitHub repository](https://github.com/antontemchenko/three-state-checkbox "Three-state checkbox - GitHub repository")
+![GitHub logo](/public/github.png "GitHub") 
+[Three-state checkbox - GitHub repository](https://github.com/antontemchenko/three-state-checkbox)
 
 I also need help to extend this directive, so if you want to contribute, I will be very thankful.
