@@ -239,6 +239,6 @@ I also need help to extend this directive, so if you want to contribute, I will 
 
 ___
 
-##Demo 
+## Demo 
 
 You can try demo here: [Three-state checkbox DEMO](http://anton.temchenko.com.ua/dev/three-state-checkbox/demo)
