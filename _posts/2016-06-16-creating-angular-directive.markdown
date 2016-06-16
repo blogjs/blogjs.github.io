@@ -4,8 +4,8 @@ comments: true
 categories:
     - AngularJS
 title:  "Creating AngularJS Directive 'Three-state-checkbox'"
-date:   2016-06-16 00:00:00 +0200
-published: false
+date:   2016-06-16 08:00:00 +0200
+published: true
 tags: 
     - AngularJS
     - Directive
@@ -76,9 +76,9 @@ with that directive.
             };
         }]);
         
-Ok now we have our angular **module** and **directive**. <br/>
+Ok now we have our angular **module** and **directive** initialized. <br/>
 So to use it in another project, you need to add this _JavaScript_ file to _index.html_ and add `"threeStateCheckbox"` to dependencies of your app module.<br/>
-And in my directive `ngModel` is required so usage of it should look like this:
+In my directive `ngModel` is required so usage of it should look like this:
 
 **app.js** :
 
@@ -106,3 +106,131 @@ And in my directive `ngModel` is required so usage of it should look like this:
         <script type="text/javascript src="app.js"></script>
     </body>
     
+Ok. But directive will show nothing now.
+
+If you are creating simple element directive _(like checkbox, input, etc )_, you should better not create template for your directive, but use element, 
+by which your directive was initialized in _html_ file. 
+
+Modify your element and then do `$compile(element)(scope);`. 
+
+    
+    link: function(scope, element, attrs, ngModel){
+        scope.click = function(){};
+        element.attr("class", "tri-sta-che");
+        element.attr("ng-click", "click()");
+        element.removeAttr("three-state-checkbox");
+        $compile(element)(scope);        
+    }
+
+So as you can see, I've added `ng-click` attribute thought `class` and removed `three-state-checkbox`, because my directive configured with `restrict: "A"` which means it can be linked only by attribute. 
+
+Ok now we need to change `ngModel`, when someone will **click** on the "checkbox". <br/>
+4-th attribute of `link` function is _Collection_ of required directives, or single directive, if only one directive is requiired. <br/>
+As `ngModel` is the only directive **required** by  **three-state-checkbox** I can reach the `ngModel` object from link function attributes.<br/> 
+We will use 2 methods and 1 parameter of `ngModel` object:
+
+* `$setViewValue()` - to set value to `ngModel`
+* `$render()` - to render `ngModel` and trigger event for `ng-change`
+* `$modelValue` - current value of `ngModel`
+
+<br/>
+
+        link: function(scope, element, attrs, ngModel){
+            var states = [true, false, null];
+            
+            scope.click = function(){
+                var st;
+                states.map(function(val, i){
+                    if(scope.ngModel === val){
+                        st = states[(i+1)%3];
+                    }
+                });
+                ngModel.$setViewValue(st);
+                ngModel.$render();
+            };
+            element.attr("class", "tri-sta-che");
+            element.attr("ng-click", "click()");
+            element.removeAttr("three-state-checkbox");
+            $compile(element)(scope);
+        }
+
+Ok. Now **three-state-checkbox** directive is working properly, changing **ngModel** and triggering **ngChange** event. 
+
+I've also added `options` parameter to directive, and `ng-class` attribute to element, to change class when state is changed. 
+
+So my first stable version **v 1.0.7** looks like this: 
+
+    'use strict';
+    angular.module("threeStateCheckbox", [])
+        .directive("threeStateCheckbox", ['$compile', function($compile){
+            var dirObj = {
+                restrict: "A",
+                transclude: true,
+                require: 'ngModel',
+                scope: {
+                    'options': "@options",
+                },
+                template:'<span class="tsc-b tsc-b-t"></span>'+
+                '<span class="tsc-b tsc-b-l"></span>'+
+                '<span class="tsc-b tsc-b-r"></span>'+
+                '<span class="tsc-b tsc-b-b"></span>',
+                link: function(scope, element, attrs, ngModel){
+                    config.set(scope.options);
+                    var states = [true, false, null];
+                    var classNames = ["checked", "unchecked", "clear"];
+                    scope.click = function(){
+                        var st;
+                        states.map(function(val, i){
+                            if(ngModel.$modelValue === val){
+                                st = states[(i+1)%3];
+                            }
+                        });
+                        ngModel.$setViewValue(st);
+                        ngModel.$render();
+                    };
+                    scope.tscClassName = function(){
+                        var className;
+                        states.map(function(val, i){
+                            if(ngModel.$modelValue=== val){
+                                className = classNames[i];
+                            }
+                        });
+                        return className;
+                    };
+                    element.attr("class", "tri-sta-che " + config.opts.size);
+                    element.attr("ng-click", "click()");
+                    element.attr("ng-class", "tscClassName()");
+                    element.removeAttr("three-state-checkbox");
+                    element.removeAttr("options");
+                    $compile(element)(scope);
+                }
+            };
+            var config = {
+                opts: {
+                    size: 'md'
+                },
+                set: function(options){
+                    if(options){
+                        for(var key in options){
+                            this.opts[key] = options[key];
+                        }
+                    }
+                }
+            };
+            return dirObj;
+        }]);
+
+I've created animations for changing states and **Internet Explorer** doesn't support all styles for _css pseudo-elements_, so I had to create **template** with _spans_.
+
+___
+
+## Versioning
+
+Use **Git tags** to support versioning of your project. Read more about [Git Tagging](https://git-scm.com/book/en/v2/Git-Basics-Tagging)
+        
+
+## GitHub repository
+
+[![GitHub logo](/public/github.png "") ](https://github.com/antontemchenko/three-state-checkbox "Three-state checkbox - GitHub repository")
+
+I also need help to extend this directive, so if you want to contribute, I will be very thankful.
