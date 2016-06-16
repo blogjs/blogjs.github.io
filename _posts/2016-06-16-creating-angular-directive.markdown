@@ -236,3 +236,9 @@ ___
 [Three-state checkbox - GitHub repository](https://github.com/antontemchenko/three-state-checkbox)
 
 I also need help to extend this directive, so if you want to contribute, I will be very thankful.
+
+___
+
+##Demo 
+
+You can try demo here: [Three-state checkbox DEMO](http://anton.temchenko.com.ua/dev/three-state-checkbox/demo)
