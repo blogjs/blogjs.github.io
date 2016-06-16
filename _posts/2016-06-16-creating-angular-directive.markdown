@@ -231,6 +231,7 @@ Use **Git tags** to support versioning of your project. Read more about [Git Tag
 
 ## GitHub repository
 
-[![GitHub logo](/public/github.png "") ](https://github.com/antontemchenko/three-state-checkbox "Three-state checkbox - GitHub repository")
+![GitHub logo](/public/github.png "") 
+[Three-state checkbox - GitHub repository](https://github.com/antontemchenko/three-state-checkbox "Three-state checkbox - GitHub repository")
 
 I also need help to extend this directive, so if you want to contribute, I will be very thankful.
