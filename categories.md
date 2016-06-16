@@ -2,8 +2,8 @@
 layout: page
 title: Categories
 permalink: /categories/
-published: false
-order: 3
+published: true
+order: 2
 keywords: "categories, javascript, blog, articles, tags"
 description: "All posts of 'blogJS - Javascript blog', sorted by categories"
 ---
@@ -30,17 +30,17 @@ description: "All posts of 'blogJS - Javascript blog', sorted by categories"
 
 
 {% for cat in cats %}
-<h2 id="{{ cat | slugify }}">{{ cat }}</h2>
+<h3 id="{{ cat | slugify }}">{{ cat }}</h3>
 <ul>
 {% for post in site.posts %}
 {% if post.categories contains cat %}
 <li>
-<h3>
+
 <a href="{{ post.url }}">
 {{ post.title }}
 </a>
 <small>{{ post.date | date_to_string }}</small>
-</h3>
+
 </li>
 {% endif %}
 {% endfor %}

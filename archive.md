@@ -3,7 +3,7 @@ layout: page
 title: Archive
 permalink: /archive/
 published: true
-order: 2
+order: 3
 keywords: "javascript posts, posts, archive, articles"
 description: "All posts of 'blogJS - Javascript blog' sorted by date"
 ---
