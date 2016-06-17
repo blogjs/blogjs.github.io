@@ -19,7 +19,7 @@ thumbnailAlt: "three-state checkbox"
 
 ## Pre-story
 
-Yesterday at work, I've received a task, which I should be done today _(and I actually did)_. <br/>Simple task to filter table by logical value in one column.
+Yesterday at work, I've received a task, which I should had done today _(and I actually did)_. <br/>Simple task to filter table by logical value in one column.
 
 So I had 3 values to filter by: `null`, `true` and `false` _(not filtered, published, unpublished)_.<br/>
 I've thought what would be the best visual solution for that... 
@@ -31,8 +31,8 @@ I knew, that I don't want to create three-option `select`, like that:
 </select>
 (what is actually the fastest solution of that issue) .
 
-But I've decided to make three-state-checkbox. I wanted it to be clean and semantic solution, 
-so I've also decided to create at home **open-source package** with AngularJS directory of **three-state-checkbox**.
+But I've decided to make three-state checkbox. I wanted it to be clean and semantic solution, 
+so I've also decided to create **open-source package** with AngularJS directory of **three-state-checkbox**.
 <!--more-->
 
 ___
@@ -46,7 +46,7 @@ Read more [how to publish your package](https://docs.npmjs.com/getting-started/p
 ___
 
 ![bower logo](/public/bower-logo.svg "bower")
-We use **bower** thought **npm** at our project. But our **gulp** is configured to automatically insert **bower** dependencies to _index.html_ when built. <br/>
+We use both **bower** and **npm** at our project. But our **gulp** is configured to automatically insert **bower** dependencies to _index.html_ while id building. <br/>
 Also if you are publishing your first package you don't have to register at bower, and documentation is more understandable: 
 [Creating package with **bower**](https://bower.io/docs/creating-packages/)<br/>
 
@@ -77,7 +77,7 @@ with that directive.
         }]);
         
 Ok now we have our angular **module** and **directive** initialized. <br/>
-So to use it in another project, you need to add this _JavaScript_ file to _index.html_ and add `"threeStateCheckbox"` to dependencies of your app module.<br/>
+So to use it in another project, you need to add this _JavaScript_ file to _index.html_ and add `"threeStateCheckbox"` module to dependencies of your app module.<br/>
 In my directive `ngModel` is required so usage of it should look like this:
 
 **app.js** :
@@ -106,7 +106,7 @@ In my directive `ngModel` is required so usage of it should look like this:
         <script type="text/javascript src="app.js"></script>
     </body>
     
-Ok. But directive will show nothing now.
+Ok. But directive is showing nothing now.
 
 If you are creating simple element directive _(like checkbox, input, etc )_, you should better not create template for your directive, but use element, 
 by which your directive was initialized in _html_ file. 
@@ -122,11 +122,11 @@ Modify your element and then do `$compile(element)(scope);`.
         $compile(element)(scope);        
     }
 
-So as you can see, I've added `ng-click` attribute thought `class` and removed `three-state-checkbox`, because my directive configured with `restrict: "A"` which means it can be linked only by attribute. 
+So as you can see, I've added `ng-click` and `class` attributes and removed `three-state-checkbox`, because my directive is configured with `restrict: "A"`, which means it can be linked only by attribute. 
 
 Ok now we need to change `ngModel`, when someone will **click** on the "checkbox". <br/>
-4-th attribute of `link` function is _Collection_ of required directives, or single directive, if only one directive is requiired. <br/>
-As `ngModel` is the only directive **required** by  **three-state-checkbox** I can reach the `ngModel` object from link function attributes.<br/> 
+4-th attribute of `link` function is _Collection_ of required directives, or is a single directive, if only one directive is required. <br/>
+As `ngModel` is the only directive **required** by **three-state-checkbox** I can reach the `ngModel` object from link function attributes.<br/> 
 We will use 2 methods and 1 parameter of `ngModel` object:
 
 * `$setViewValue()` - to set value to `ngModel`
