@@ -18,6 +18,41 @@
   {% else %}
    <meta name="keywords" content="Javascript, ECMAScript6, blog, js, es, frontend, front end, Anton Temchenko" />
    {% endif %}
+   
+<!-- twitter cards -->
+
+{% if post.thumbnail %}
+<meta name="twitter:card" content="summary_large_image">
+{% else %}
+<meta name="twitter:card" content="summary">
+{% endif %}
+<meta name="twitter:site" content="@{{site.title}}">
+<meta name="twitter:creator" content="@{{site.twitter_username}}">
+{% if post.title %}
+  <meta name="twitter:title" content="{{ post.title }}">
+{% else if page.title %}
+  <meta name="twitter:title" content="{{ page.title }}">
+{% else %}
+  <meta name="twitter:title" content="{{ site.title }}">
+{% endif %}
+{% if post.url %}
+  <meta name="twitter:url" content="{{ site.url }}{{ post.url }}">
+{% else if page.url %}
+  <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
+{% endif %}
+{% if post.description %}
+  <meta name="twitter:description" content="{{ post.description }}">
+{% else if page.description %}
+  <meta name="twitter:description" content="{{ page.description }}">
+{% else %}
+  <meta name="twitter:description" content="{{ site.description }}">
+{% endif %}
+{% if post.thumbnail %}
+  <meta name="twitter:image:src" content="{{ site.url }}{{ post.thumbnail }}">
+{% endif %}
+{% if post.thumbnail %}
+  <meta name="twitter:image:alt" content="{{ site.url }}{{ post.thumbnailAlt }}">
+{% endif %}
 
   <title>
     {% if page.title == "Home" %}
