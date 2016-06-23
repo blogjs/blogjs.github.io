@@ -158,7 +158,7 @@ Ok. Now **three-state-checkbox** directive is working properly, changing **ngMod
 
 I've also added `options` parameter to directive, and `ng-class` attribute to element, to change class when state is changed. 
 
-So my first stable version **v 1.0.7** looks like this: 
+So my stable version **v 1.1.0** looks like this: 
 
     'use strict';
     angular.module("threeStateCheckbox", [])
@@ -168,7 +168,7 @@ So my first stable version **v 1.0.7** looks like this:
                 transclude: true,
                 require: 'ngModel',
                 scope: {
-                    'options': "@options",
+                    'options': "@options"
                 },
                 template:'<span class="tsc-b tsc-b-t"></span>'+
                 '<span class="tsc-b tsc-b-l"></span>'+
@@ -236,6 +236,8 @@ ___
 [Three-state checkbox - GitHub repository](https://github.com/antontemchenko/three-state-checkbox)
 
 I also need help to extend this directive, so if you want to contribute, I will be very thankful.
+
+Here are some issues on GitHub: [Fix 'em](https://github.com/antontemchenko/three-state-checkbox/issues)
 
 ___
 
