@@ -113,5 +113,8 @@ But to understand where the new syntax is really helpful, let's look on injected
 Don't you see that **ECMAScript 6 is more about program** you wrote, **not about syntax** of it!<br/>
 
 \* In last example in ECMAScript 6 I used a **block-scope**, in ECMAScript 5 only function was block scoped. 
-[Read more about block-scope in ECMAScript 6]({% post_url 2016-06-12-es6-block-scoped-functions %})
+Read more here: 
+
++ [Block-scoped functions in ECMAScript 6]({% post_url 2016-06-12-es6-block-scoped-functions %}) 
++ [Block-scoped variables in ECMAScript 6]({% post_url 2016-06-09-es6-let-block-scoped-variables %})
 
