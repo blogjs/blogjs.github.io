@@ -26,22 +26,22 @@ ___
 ## Understanding Block Scope
 
 Let's compare `var` and `let` behavior with `this`: 
-
+{% highlight javascript %}
     var x = 'global';
     let y = 'global';
     console.log(this.x); //'global'
     console.log(this.y); //undefined
-    
+{% endhighlight %}
 It looks like `let` variable has its own scope.
 
-  
+{% highlight javascript %}
     if(1>0){
         var x = 0; //scope is inside the function
         let y = 1; //scope is inside the if-block
     }
     console.log('x:', x); //0
     console.log('y:', y); //undefined
-    
+{% endhighlight %}
 As you can see, `var` scope is inside the function and `let` scope is inside if-block.
 
 ___
@@ -49,42 +49,42 @@ ___
 **Why does it happen?**
  
  Because when you write code like this: 
- 
+{% highlight javascript %}
     function a(){
         if(true){
             var b = 1;
         }
     }
-    
+{% endhighlight %}
  The really thing Javascript doing is :
- 
+{% highlight javascript %}
     function a(){
         var b;
         if(true){
             b = 1;
         }
     }
-    
+{% endhighlight %}
  But when you use `let` or `const` it looks another way.
  
  This code:
- 
+{% highlight javascript %}
     function a(){
         let b = 0;
         if(true){
             let b = 1;
         }
      }
-     
+{% endhighlight %}
  Becomes this:
- 
+{% highlight javascript %}
     function a(){
         var b = 1;
         if(true){
             var b$0 = 1;
         }
      }
-     
+{% endhighlight %}
  ___
  
 ## `for` loop
@@ -94,7 +94,7 @@ ___
  For example, if you had a **variable** with the **same name** it will be **rewritten** by a variable from inside a `for` loop. 
  
 **ECMAScript 5 example**:
- 
+{% highlight javascript %}
      var i = 5;
      //...
      for(var i=0; i<10; i++){
@@ -102,11 +102,11 @@ ___
      };
      console.log(i);
      // 10
- 
+{% endhighlight %}
 In ES6 this problem solves with `let` variable, because it is **block-scoped**, so our new `let` variable will be scoped to `for` block.
  
  **ECMAScript 6 example**:
-  
+{% highlight javascript %}
       let i = 5;
       //...
       for(let i=0; i<10; i++){
@@ -114,7 +114,7 @@ In ES6 this problem solves with `let` variable, because it is **block-scoped**, 
       };
       console.log(i);
       // 5
- 
+{% endhighlight %}
  ___
  
 ## `let` and `const` best practices

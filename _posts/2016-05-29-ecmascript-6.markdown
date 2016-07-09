@@ -35,15 +35,15 @@ ___
 
 
 **Arrow functions:**
-
+{% highlight javascript %}
     odds  = evens.map(v => v + 1)
     pairs = evens.map(v => ({ even: v, odd: v + 1 }))
     nums  = evens.map((v, i) => v + i)
-
+{% endhighlight %}
 
 
 **Classes:**
-
+{% highlight javascript %}
     class Rectangle extends Shape {
         constructor (id, x, y, width, height) {
             super(id, x, y)
@@ -57,7 +57,7 @@ ___
             this.radius = radius
         }
     }
-
+{% endhighlight %}
 ___
 
 ## ES6 vs ES5
@@ -83,8 +83,8 @@ ___
 No doubt, **ECMAScript 6 is sexy!**
 If you haven't tried coding in **ECMAScript 6** just open **Chrome dev tools** and try it out. You will definitely love it!
 Start with simple arrow functions:
-    
+{% highlight javascript %}
     a = x => x*2;
     a(10);
-    
+{% endhighlight %}
 Good luck ;)

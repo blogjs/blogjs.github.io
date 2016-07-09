@@ -24,7 +24,7 @@ But in **ECMAScript 6** you have better solution!
 <!--more-->
 
 This is the way we'd write in **ESCMAScript 5**:
-
+{% highlight javascript %}
     (function(){
         function privateFunc(){
             console.log("You cannot reach me outside this scope");
@@ -34,10 +34,10 @@ This is the way we'd write in **ESCMAScript 5**:
         }
         privateFunc();
     })();
-    
+{% endhighlight %}
     
 And here is **ECMAScript 6 block-scoped functions**:
-
+{% highlight javascript %}
     {
         function privateFunc(){
             console.log("You cannot reach me outside this scope")
@@ -47,5 +47,5 @@ And here is **ECMAScript 6 block-scoped functions**:
         }
         privateFunc()
     }
-    
+{% endhighlight %}
 As you see, everything between a curly brackets **`{`** & **`}`**  has own scope in **ECMAScript 6**!

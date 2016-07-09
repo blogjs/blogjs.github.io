@@ -36,9 +36,9 @@ ___
 ## Declaration
 
 Very simple. Just use `const` instead of `var` :
-
+{% highlight javascript %}
     const brandColor = 'turquoise';  
-
+{% endhighlight %}
 The value of a constant doesn’t have to to be known at compile time, but you must assign it a value exactly once.
 
 ___
@@ -48,17 +48,17 @@ ___
 **Redeclaring:**
 
 Constants can’t be redeclared. 
-
+{% highlight javascript %}
     const num = 1;
     //1
     const num = 2;
     //Uncaught TypeError: Identifier 'num' has already been declared(…)
-
+{% endhighlight %}
 
 **Function scope:**
 
 You can declare `const` inside the function scope with the same as outside it, but you actually have local scoped `const`.
-
+{% highlight javascript %}
     const num = 1;
     
     function setNum(){
@@ -71,29 +71,29 @@ You can declare `const` inside the function scope with the same as outside it, b
     
     console.log(num);
     //1;
-    
+{% endhighlight %}
 You cannot reach `const` outside scope:
-
+{% highlight javascript %}
     if(!num){
         const num = 2;
     }
     console.log(num);
     //Uncaught ReferenceError: num is not defined(…)
-
+{% endhighlight %}
 Ok that's easy. But also you cannot reach const by `this`, because it is block-scoped:
  
-    
+{% highlight javascript %}
     const date = new Date();
     
     console.log(this.date);
     //undefined
-    
+{% endhighlight %}
 ___
 
 ## Deleting and changing value of `const`
 
 You cannot change value or delete a simple constant variable.
-
+{% highlight javascript %}
     const a = 1;
     
     a++;
@@ -104,13 +104,13 @@ You cannot change value or delete a simple constant variable.
     
     console.log(a);
     //1
-
+{% endhighlight %}
 ___
 
 ## `Const` Objects
 
 If you declare `const` Object, you will not be able to delete it, or make it `array` or `string`, but you will be able to declare, change and even delete values of your `const` Object.
-
+{% highlight javascript %}
     const params = {
         size: 2,
         color: 'gray'
@@ -124,15 +124,15 @@ If you declare `const` Object, you will not be able to delete it, or make it `ar
     
     console.log(params)
     //Object {size: 3}
-
+{% endhighlight %}
 
 But there is the way to `freeze` the Object with its values:
-
+{% highlight javascript %}
     const obj = Object.freeze({
         'num': 3
     });
     obj.num = 4; //throws error
-    
+{% endhighlight %}
 ___
 
 ## So where to use `const` ?

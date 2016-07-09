@@ -59,7 +59,7 @@ ___
 
 If you want to export your directive for others or to use it in a multiple projects, you should create separate **Angular Module** 
 with that directive.
-
+{% highlight javascript %}
     angular.module("threeStateCheckbox", [])
         .directive("threeStateCheckbox", [ function(){
             return {
@@ -75,20 +75,21 @@ with that directive.
                 }
             };
         }]);
-        
+{% endhighlight %}
 Ok now we have our angular **module** and **directive** initialized. <br/>
 So to use it in another project, you need to add this _JavaScript_ file to _index.html_ and add `"threeStateCheckbox"` module to dependencies of your app module.<br/>
 In my directive `ngModel` is required so usage of it should look like this:
 
 **app.js** :
-
+{% highlight javascript %}
     angular.module("myApp", ["threeStateCheckbox"])
         .controller("myCtrl",[function(){
             this.checkboxModel = null;
         }]);
+{% endhighlight %}
 
 **index.html** :
-    
+{% highlight html %}
     <head>
         <!-- title, etc ... -->
         <link rel="text/css" href="three-state-checkbox.css"/>
@@ -105,7 +106,7 @@ In my directive `ngModel` is required so usage of it should look like this:
         <script type="text/javascript src="three-state-checkbox.js"></script>
         <script type="text/javascript src="app.js"></script>
     </body>
-    
+{% endhighlight %}
 Ok. But directive is showing nothing now.
 
 If you are creating simple element directive _(like checkbox, input, etc )_, you should better not create template for your directive, but use element, 
@@ -113,14 +114,15 @@ by which your directive was initialized in _html_ file.
 
 Modify your element and then do `$compile(element)(scope);`. 
 
-    
+{% highlight javascript %}
     link: function(scope, element, attrs, ngModel){
         scope.click = function(){};
         element.attr("class", "tri-sta-che");
         element.attr("ng-click", "click()");
         element.removeAttr("three-state-checkbox");
-        $compile(element)(scope);        
+        $compile(element)(scope);
     }
+{% endhighlight %}
 
 So as you can see, I've added `ng-click` and `class` attributes and removed `three-state-checkbox`, because my directive is configured with `restrict: "A"`, which means it can be linked only by attribute. 
 
@@ -134,7 +136,7 @@ We will use 2 methods and 1 parameter of `ngModel` object:
 * `$modelValue` - current value of `ngModel`
 
 <br/>
-
+{% highlight javascript %}
         link: function(scope, element, attrs, ngModel){
             var states = [true, false, null];
             
@@ -153,13 +155,13 @@ We will use 2 methods and 1 parameter of `ngModel` object:
             element.removeAttr("three-state-checkbox");
             $compile(element)(scope);
         }
-
+{% endhighlight %}
 Ok. Now **three-state-checkbox** directive is working properly, changing **ngModel** and triggering **ngChange** event. 
 
 I've also added `options` parameter to directive, and `ng-class` attribute to element, to change class when state is changed. 
 
 So my stable version **v 1.1.0** looks like this: 
-
+{% highlight javascript %}
     'use strict';
     angular.module("threeStateCheckbox", [])
         .directive("threeStateCheckbox", ['$compile', function($compile){
@@ -219,6 +221,7 @@ So my stable version **v 1.1.0** looks like this:
             };
             return dirObj;
         }]);
+{% endhighlight %}
 
 I've created animations for changing states and **Internet Explorer** doesn't support all styles for _css pseudo-elements_, so I had to create **template** with _spans_.
 
