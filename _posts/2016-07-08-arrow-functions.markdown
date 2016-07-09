@@ -9,59 +9,53 @@ published: true
 tags: 
     - ECMAScript6
     - 'Arrow Functions'
-description: "Syntax and use case of arrow functions in ECMAScript 6"
+description: "Overview of syntax and use case of arrow functions in ECMAScript 6"
 thumbnail: "/public/arrow-function.png"
-keywords: "Arrow function, ECMAScript 6, es6, syntax"
+keywords: "Arrow functions, ECMAScript 6, es6, syntax"
 thumbnailAlt: "ECMAScript 6 arrow function"
 
 ---
 
 ___
 
+I think that an **arrow functions** are one of the best features of **ECMAScript 6**, excluding `class`-es and **OOP** programming at all.
+
+It has really very helpful and **useful syntax** for scripting language. So let's check it out:
+<!--more-->
+
+___
+
 ## Syntax
 
-Function with no parameters:
 {% highlight javascript %}
-    () => { statements } 
-{% endhighlight %}
+    //Function with no parameters:
+    () => { statements } ]
 
-Function with single parameter:
-{% highlight javascript %}
+    //Function with single parameter:
     singleParam => { statements }
-{% endhighlight %}
 
-Function with one and more parameter:
-{% highlight javascript %}
+    //Function with one and more parameter:
     (param1, param2, …, paramN) => { statements }
-{% endhighlight %}
     
-Function with simple return statement:
-{% highlight javascript %}
+    //Function with simple return statement:
     n => n*2
 {% endhighlight %}
 
-__How did it look in ECMASript 5?__<!--more-->
+__How did it look in ECMASript 5?__
 
-Function with no parameters:
 {% highlight javascript %}
+    //Function with no parameters:
     function() { statements }
-{% endhighlight %}
 
-Function with single parameter:
-{% highlight javascript %}
+    //Function with single parameter:
     function( singleParam ) { return statements }
-{% endhighlight %}
 
-Function with one and more parameter:
-{% highlight javascript %}
+    //Function with one and more parameter:
     function (param1, param2, …, paramN) { return statements }
-{% endhighlight %}
     
-Function with simple return statement:
-{% highlight javascript %}
+    //Function with simple return statement:
     function(n){return n*2}
 {% endhighlight %}
-    
 ___
 
 ## Use case
