@@ -21,67 +21,97 @@ ___
 ## Syntax
 
 Function with no parameters:
-
-    //ECMAScript 6:
+{% highlight javascript %}
     () => { statements } 
-    
-    //ECMAScript 5:
-    function() { statements }
+{% endhighlight %}
 
 Function with single parameter:
-    
-    //ECMAScript 6:
+{% highlight javascript %}
     singleParam => { statements }
-    
-    //ECMAScript 5:
-    function( singleParam ) { return statements }
+{% endhighlight %}
 
 Function with one and more parameter:
-
-    //ECMAScript 6:
+{% highlight javascript %}
     (param1, param2, …, paramN) => { statements }
-    
-    //ECMAScript 5:
-    function (param1, param2, …, paramN) { return statements }
+{% endhighlight %}
     
 Function with simple return statement:
-
-    //ECMAScript 6
+{% highlight javascript %}
     n => n*2
-    
-    //ECMAScript 5
-    function(n){return n*2}
+{% endhighlight %}
 
+__How did it look in ECMASript 5?__<!--more-->
+
+Function with no parameters:
+{% highlight javascript %}
+    function() { statements }
+{% endhighlight %}
+
+Function with single parameter:
+{% highlight javascript %}
+    function( singleParam ) { return statements }
+{% endhighlight %}
+
+Function with one and more parameter:
+{% highlight javascript %}
+    function (param1, param2, …, paramN) { return statements }
+{% endhighlight %}
+    
+Function with simple return statement:
+{% highlight javascript %}
+    function(n){return n*2}
+{% endhighlight %}
+    
 ___
 
 ## Use case
-I __love the syntax__ of arrow functions in ECMAScript 6! I always asked myself a question *why do I need to write word 'function' all the time*.
+I __love the syntax__ of arrow functions in ECMAScript 6! I always asked myself a question *why do I need to write word 
+'function' all the time*.
 And now I don't have to.
 
 Let's see some examples:
-
+{% highlight javascript %}
     square = n=>n*n;
-    
     square(5); //25
+{% endhighlight %}
     
-In ECMAScript 5 it should be written like this:
+This is simple function that returns square of number passed as a parameter. Isn't it pretty?
 
+In ECMAScript 5 it should be written like this:
+{% highlight javascript %}
     function square(n){ return n*n }
+{% endhighlight %}
     
 But to understand where the new syntax is really helpful, let's look on injected functions:
- 
+{% highlight javascript %}
     //ECMAScript 6:
     list.map(item => item*2)
     
-    //ECMAScript 5:
-    list.map(function(item){return item*2})
-    
-    //ECMAScript 6
-    {
-        
+    //instead of ECMAScript 5:
+    list.map(function(item){return item*2}) 
+{% endhighlight %}
+{% highlight javascript %}
+    //ECMAScript 6:
+    { 
+        list.forEach(n => {
+            if(n>0){
+                list2.push(n)
+            }
+        }) 
     }
     
-    //ECMASCript 5:
+    //instead of ECMAScript 5:
     (function(){
-        
-    })()
+        list.forEach(function(n){
+            if(n>0){
+                list2.push(n)
+            }            
+        })
+    }()    
+{% endhighlight %}
+
+Don't you see that **ECMAScript 6 is more about program** you wrote, **not about syntax** of it!<br/>
+
+\* In last example in ECMAScript 6 I used a **block-scope**, in ECMAScript 5 only function was block scoped. 
+[Read more about block-scope in ECMAScript 6]({% post_url 2016-06-12-es6-block-scoped-functions %})
+
