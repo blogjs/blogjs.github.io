@@ -48,4 +48,4 @@ And here is **ECMAScript 6 block-scoped functions**:
         privateFunc()
     }
     
-As you see, we just need to use curly brackets **`{`** & **`}`**  to define block. And we have closed scope!
+As you see, everything between a curly brackets **`{`** & **`}`**  has own scope in **ECMAScript 6**!
