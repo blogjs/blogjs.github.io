@@ -76,7 +76,7 @@ In ECMAScript 5 it should be written like this:
     function square(n){ return n*n }
 {% endhighlight %}
     
-But to understand where the new syntax is really helpful, let's look on injected functions:
+But to understand where the new syntax is really helpful, let's look at injected functions:
 {% highlight javascript %}
     //ECMAScript 6:
     list.map(item => item*2)
@@ -107,7 +107,7 @@ But to understand where the new syntax is really helpful, let's look on injected
 Don't you see that **ECMAScript 6 is more about program** you wrote, **not about syntax** of it!<br/>
 
 \* In last example in ECMAScript 6 I used a **block-scope**, in ECMAScript 5 only function was block scoped. 
-Read more here: 
+Read more about block-scopes in ECMAScript 6 here: 
 
 + [Block-scoped functions in ECMAScript 6]({% post_url 2016-06-12-es6-block-scoped-functions %}) 
 + [Block-scoped variables in ECMAScript 6]({% post_url 2016-06-09-es6-let-block-scoped-variables %})
