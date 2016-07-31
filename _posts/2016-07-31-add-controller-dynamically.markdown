@@ -4,7 +4,7 @@ comments: true
 categories:
     - AngularJS
 title:  "Add AngularJS controller dynamically"
-date:   2016-07-28 22:00:00 +0200
+date:   2016-07-31 22:00:00 +0200
 published: true
 tags: 
     - AngularJS
